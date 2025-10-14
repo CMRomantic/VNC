@@ -37,7 +37,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 
-import androidx.activity.EdgeToEdge;
+//import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
 import androidx.core.text.BidiFormatter;
@@ -104,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
         // when the device theme changes. Because calling it on pre-Android 15 has the side effect of
         // enabling EdgeToEdge there as well, we only use it on Android 15 and later.
         if (Build.VERSION.SDK_INT >= 35) {
-            EdgeToEdge.enable(this);
+            //EdgeToEdge.enable(this);
         }
         setContentView(R.layout.activity_main);
 

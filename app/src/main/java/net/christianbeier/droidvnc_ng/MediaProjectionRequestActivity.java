@@ -70,18 +70,18 @@ public class MediaProjectionRequestActivity extends AppCompatActivity {
                     REQUEST_MEDIA_PROJECTION);
         } else {
             // show user info dialog before asking
-            new AlertDialog.Builder(this)
-                    .setCancelable(false)
-                    .setTitle(R.string.mediaprojection_request_activity_fallback_screen_capture_title)
-                    .setMessage(R.string.mediaprojection_request_activity_fallback_screen_capture_msg)
-                    .setPositiveButton(R.string.yes, (dialog, which) -> {
-                        // This initiates a prompt dialog for the user to confirm screen projection.
-                        startActivityForResult(
-                                screenCaptureIntent,
-                                REQUEST_MEDIA_PROJECTION);
-                    })
-                    .setNegativeButton(getString(R.string.no), (dialog, which) -> finish())
-                    .show();
+//            new AlertDialog.Builder(this)
+//                    .setCancelable(false)
+//                    .setTitle(R.string.mediaprojection_request_activity_fallback_screen_capture_title)
+//                    .setMessage(R.string.mediaprojection_request_activity_fallback_screen_capture_msg)
+//                    .setPositiveButton(R.string.yes, (dialog, which) -> {
+//                        // This initiates a prompt dialog for the user to confirm screen projection.
+//                        startActivityForResult(
+//                                screenCaptureIntent,
+//                                REQUEST_MEDIA_PROJECTION);
+//                    })
+//                    .setNegativeButton(getString(R.string.no), (dialog, which) -> finish())
+//                    .show();
         }
     }
 
