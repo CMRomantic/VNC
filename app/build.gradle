@@ -4,9 +4,9 @@ plugins {
     id 'org.jetbrains.kotlin.plugin.serialization' version "$kotlin_version"
 }
 ext {
-    apkPrefix = 'UniMetro'
+    apkPrefix = 'UniVnc'
     keystore_pad = 'key/pad_6789.keystore'
-    apkBuildTime = new Date().format("MMddHHmm", TimeZone.getTimeZone("GMT+08:00"))
+    apkBuildTime = new Date().format("yyyyMMdd", TimeZone.getTimeZone("GMT+08:00"))
 }
 
 android {
@@ -72,6 +72,14 @@ android {
     }
     buildFeatures {
         buildConfig true
+    }
+    android.applicationVariants.configureEach { variant ->
+        variant.outputs.configureEach {
+            outputFileName = "${apkPrefix}_" +
+                    "v${android.defaultConfig.versionName}_" +
+                    "${variant.buildType.name}_" +
+                    "${apkBuildTime}.apk"
+        }
     }
 }
 
