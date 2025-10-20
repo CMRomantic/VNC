@@ -69,6 +69,7 @@ public class MediaProjectionRequestActivity extends AppCompatActivity {
                     screenCaptureIntent,
                     REQUEST_MEDIA_PROJECTION);
         } else {
+            finish();
             // show user info dialog before asking
 //            new AlertDialog.Builder(this)
 //                    .setCancelable(false)
